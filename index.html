@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='http://inkcloud9.com'>InkCloud</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="getting-started">Getting Started</h1>
+
+<p>Welcome to the InkCloud Theme developer&rsquo;s guide. This guide is meant to help utilize the full power of the Ink Cloud templating engine.</p>
+
+<h2 id="sandbox-ftp-access">Sandbox FTP Access</h2>
+<pre class="highlight plaintext"><code>Host: theme.ftp.inkcloud9.com
+Port: 10021
+Username: &lt;sandbox-username&gt;
+Password: &lt;sandbox-password&gt;
+</code></pre>
+
+<p>You can update your theme files through FTP access.</p>
+
+<aside class="notice">
+You must replace <code>Username</code> and <code>Password</code> with your personal credentials.
+</aside>
+
+<p>If you don&rsquo;t have an FTP client <a href="https://filezilla-project.org/">Filezilla Client</a> is a great FTP client. It is also free!</p>
+
+<h2 id="theme-folder-structure">Theme Folder Structure</h2>
+
+<h3 id="theme-structure">Theme Structure</h3>
+
+<ul>
+<li>assets</li>
+<li>layout</li>
+<li>settings</li>
+<li>templates</li>
+</ul>
+
+<h4 id="the-assets-folder">The <em>assets</em> folder</h4>
+
+<p>The <em>assets</em> folder is where all web assets are stored. This includes images, stylesheets, javacript and fonts.</p>
+
+<h4 id="the-layout-folder">The <em>layout</em> folder</h4>
+
+<p>The <em>layout</em> folder contains all layout files. Layouts wrap your site and typically contain the common elements such as the header and footer. By default you must have a <em>theme.twig</em> present in your layout folder.</p>
+
+<h4 id="the-templates-folder">The <em>templates</em> folder</h4>
+
+<p>The <em>template</em> folder is where your page templates live.</p>
+
+          <h1 id="theme-templates">Theme Templates</h1>
+
+<h2 id="index-twig">index.twig</h2>
+
+<p>The <em>index.twig</em> renders your store home page</p>
+
+<h2 id="cart-twig">cart.twig</h2>
+
+<p>The <em>cart.twig</em> renders your the contents of the customer&rsquo;s shopping cart.</p>
+
+<h2 id="upload-twig">upload.twig</h2>
+
+<p>The <em>cart.twig</em> renders customer upload page.</p>
+
+<h2 id="404-twig">404.twig</h2>
+
+<p>The <em>404.twig</em> is rendered when a user reaches a page that does not exist</p>
+
+<h2 id="customers-account-twig">customers/account.twig</h2>
+
+<p>The <em>customers/account.twig</em> to render customer account detail page.</p>
+
+<h2 id="customers-login-twig">customers/login.twig</h2>
+
+<p>The <em>customers/login.twig</em> to render the form for a customer to log in.</p>
+
+<h2 id="customers-order-twig">customers/order.twig</h2>
+
+<p>The <em>customers/order.twig</em> to view the order detail page</p>
+
+<h2 id="customers-register-twig">customers/register.twig</h2>
+
+<p>The <em>customers/register.twig</em> is the page where a user registers for an account</p>
+
+<h2 id="customers-reset_password-twig">customers/reset_password.twig</h2>
+
+<p>The <em>customers/reset_password.twig</em> is the page where a user can reset their password</p>
+
+          <h1 id="twig-documentaiton">Twig Documentaiton</h1>
+
+<p>Twig is an open-source, PHP-based template language.</p>
+
+<h2 id="objects">Objects</h2>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This is the intro</p>
+
+<h3 id="address">address</h3>
+
+<p>Represents an address</p>
+
+<h3 id="cart">cart</h3>
+
+<p>Represents a cart</p>
+
+<p>Attributes include</p>
+
+<ul>
+<li>cart.item_count</li>
+<li>cart.items</li>
+<li>cart.total_price</li>
+<li>cart.total_weight</li>
+</ul>
+
+<h3 id="checkout">checkout</h3>
+
+<p>Represents checkout</p>
+
+<h2 id="sandbox-ftp-access">Sandbox FTP Access</h2>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
