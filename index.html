@@ -117,6 +117,111 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <p>The <em>customers/reset_password.twig</em> is the page where a user can reset their password</p>
 
+					<h1 id="theme-objects">Theme Objects</h1>
+
+<blockquote>
+<p>Example form usage</p>
+</blockquote>
+<pre class="highlight html"><code>{{form.start}}
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+    {{form.username}}
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    {{form.password('some-class')}}
+  <span class="nt">&lt;/div&gt;</span>
+  {{form.submit('Log Me In', 'btn btn-default')}}
+{{form.end}}
+</code></pre>
+
+<h3 id="form-objects">Form Objects</h3>
+
+<p>All form objects contain the following:</p>
+
+<h3 id="form-start">form.start</h3>
+
+<p>Renders the start of the form.</p>
+
+<h3 id="form-end">form.end</h3>
+
+<p>Renders the end of the form</p>
+
+<h3 id="form-submit-label">form.submit([label])</h3>
+
+<p>Renders a submit button</p>
+
+<h2 id="login_form">login_form</h2>
+
+<p>Used to log a user into their account.</p>
+
+<aside class="notice">
+Only can be used on <code>customers/login.twig</code>.
+</aside>
+<pre class="highlight plaintext"><code>form.username
+form.password
+</code></pre>
+
+<h3 id="form-username">form.username</h3>
+
+<p>renders the form username text element.</p>
+
+<h3 id="form-password">form.password</h3>
+
+<p>renders the form password element.</p>
+
+<h2 id="customer_form">customer_form</h2>
+
+<aside class="notice">
+Only can be used on <code>customers/register.twig</code>.
+</aside>
+
+<h3 id="form-email">form.email</h3>
+
+<p>renders the form email text element.</p>
+
+<h3 id="form-password">form.password</h3>
+
+<p>renders the form password text element.</p>
+
+<h3 id="form-passwordretype">form.passwordRetype</h3>
+
+<p>renders the form password retype text element.</p>
+
+<h3 id="form-firstname">form.firstName</h3>
+
+<p>renders the form first name text element.</p>
+
+<h3 id="form-lastname">form.lastName</h3>
+
+<p>renders the form last name element.</p>
+
+<h3 id="form-address1">form.address1</h3>
+
+<p>renders the form address1 element.</p>
+
+<h3 id="form-address2">form.address2</h3>
+
+<p>renders the form address2 element.</p>
+
+<h3 id="form-city">form.city</h3>
+
+<p>renders the form city element.</p>
+
+<h3 id="form-stateprovince">form.stateProvince</h3>
+
+<p>renders the form state/province select element.</p>
+
+<h3 id="form-postalcode">form.postalCode</h3>
+
+<p>renders the form postal code element.</p>
+
+<h3 id="form-phone">form.phone</h3>
+
+<p>renders the form postal code element.</p>
+
+<h2 id="shipping_form">shipping_form</h2>
+
 					<h1 id="twig-documentaiton">Twig Documentaiton</h1>
 
 <p>Twig is an open-source, PHP-based template language.</p>
@@ -130,6 +235,8 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 <h3 id="address">address</h3>
 
 <p>Represents an address</p>
+
+<h3 id="form">form</h3>
 
 <h3 id="cart">cart</h3>
 
