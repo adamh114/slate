@@ -52,6 +52,30 @@ renders the form username text element.
 renders the form password element.
 
 
+
+
+
+## reset_password_form
+
+
+Used to log a user into their account.
+
+<aside class="notice">
+Only can be used on <code>customers/reset-password.twig</code>.
+</aside>
+
+
+
+```
+form.username
+```
+
+### form.username
+renders the form username text element.
+
+
+
+
 ## customer_form
 
 <aside class="notice">

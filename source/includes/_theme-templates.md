@@ -39,9 +39,9 @@ The _customers/order.twig_ to view the order detail page
 The _customers/register.twig_ is the page where a user registers for an account
 
 
-## customers/reset_password.twig
+## customers/reset-password.twig
 
-The _customers/reset_password.twig_ is the page where a user can reset their password
+The _customers/reset-password.twig_ is the page where a user can reset their password
 
 
 
