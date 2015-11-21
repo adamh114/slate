@@ -113,9 +113,9 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <p>The <em>customers/register.twig</em> is the page where a user registers for an account</p>
 
-<h2 id="customers-reset_password-twig">customers/reset_password.twig</h2>
+<h2 id="customers-reset-password-twig">customers/reset-password.twig</h2>
 
-<p>The <em>customers/reset_password.twig</em> is the page where a user can reset their password</p>
+<p>The <em>customers/reset-password.twig</em> is the page where a user can reset their password</p>
 
 					<h1 id="theme-objects">Theme Objects</h1>
 
@@ -169,6 +169,20 @@ form.password
 <h3 id="form-password">form.password</h3>
 
 <p>renders the form password element.</p>
+
+<h2 id="reset_password_form">reset_password_form</h2>
+
+<p>Used to log a user into their account.</p>
+
+<aside class="notice">
+Only can be used on <code>customers/reset-password.twig</code>.
+</aside>
+<pre class="highlight plaintext"><code>form.username
+</code></pre>
+
+<h3 id="form-username">form.username</h3>
+
+<p>renders the form username text element.</p>
 
 <h2 id="customer_form">customer_form</h2>
 
