@@ -1,43 +1,43 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>API Reference</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="javascripts/all.js" type="text/javascript"></script>
+		<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="javascripts/all.js" type="text/javascript"></script>
 
-  </head>
+	</head>
 
-  <body class="index">
-    <a href="#" id="nav-button">
-      <span>
-        NAV
-        <img src="images/navbar.png" />
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-      <img src="images/logo.png" />
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='http://inkcloud9.com'>InkCloud</a></li>
-        </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        
-          <h1 id="getting-started">Getting Started</h1>
+	<body class="index">
+		<a href="#" id="nav-button">
+			<span>
+				NAV
+				<img src="images/navbar.png" />
+			</span>
+		</a>
+		<div class="tocify-wrapper">
+			<img src="images/InkCloud_Logo_Small-1.jpg" />
+				<div class="search">
+					<input type="text" class="search" id="input-search" placeholder="Search">
+				</div>
+				<ul class="search-results"></ul>
+			<div id="toc">
+			</div>
+				<ul class="toc-footer">
+						<li><a href='#'>Sign Up for a Developer Key</a></li>
+						<li><a href='http://inkcloud9.com'>InkCloud</a></li>
+				</ul>
+		</div>
+		<div class="page-wrapper">
+			<div class="dark-box"></div>
+			<div class="content">
+				
+					<h1 id="getting-started">Getting Started</h1>
 
 <p>Welcome to the InkCloud Theme developer&rsquo;s guide. This guide is meant to help utilize the full power of the Ink Cloud templating engine.</p>
 
@@ -79,11 +79,15 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <p>The <em>template</em> folder is where your page templates live.</p>
 
-          <h1 id="theme-templates">Theme Templates</h1>
+					<h1 id="theme-templates">Theme Templates</h1>
 
 <h2 id="index-twig">index.twig</h2>
 
 <p>The <em>index.twig</em> renders your store home page</p>
+
+<h2 id="product-twig">product.twig</h2>
+
+<p>The <em>product.twig</em> renders your store product pages</p>
 
 <h2 id="cart-twig">cart.twig</h2>
 
@@ -113,11 +117,164 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <p>The <em>customers/register.twig</em> is the page where a user registers for an account</p>
 
-<h2 id="customers-reset_password-twig">customers/reset_password.twig</h2>
+<h2 id="customers-reset-password-twig">customers/reset-password.twig</h2>
 
-<p>The <em>customers/reset_password.twig</em> is the page where a user can reset their password</p>
+<p>The <em>customers/reset-password.twig</em> is the page where a user can reset their password</p>
 
-          <h1 id="twig-documentaiton">Twig Documentaiton</h1>
+					<h1 id="theme-objects">Theme Objects</h1>
+
+<blockquote>
+<p>Example form usage</p>
+</blockquote>
+<pre class="highlight html"><code>{{form.start}}
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+    {{form.username}}
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    {{form.password('some-class')}}
+  <span class="nt">&lt;/div&gt;</span>
+  {{form.submit('Log Me In', 'btn btn-default')}}
+{{form.end}}
+</code></pre>
+
+<h3 id="form-objects">Form Objects</h3>
+
+<p>All form objects contain the following:</p>
+
+<h3 id="form-start">form.start</h3>
+
+<p>Renders the start of the form.</p>
+
+<h3 id="form-end">form.end</h3>
+
+<p>Renders the end of the form</p>
+
+<h3 id="form-submit-label">form.submit([label])</h3>
+
+<p>Renders a submit button</p>
+
+<h2 id="login_form">login_form</h2>
+
+<p>Used to log a user into their account.</p>
+
+<aside class="notice">
+Only can be used on <code>customers/login.twig</code>.
+</aside>
+<pre class="highlight plaintext"><code>form.username
+form.password
+</code></pre>
+
+<h3 id="form-username">form.username</h3>
+
+<p>renders the form username text element.</p>
+
+<h3 id="form-password">form.password</h3>
+
+<p>renders the form password element.</p>
+
+<h2 id="reset_password_form">reset_password_form</h2>
+
+<p>Used to log a user into their account.</p>
+
+<aside class="notice">
+Only can be used on <code>customers/reset-password.twig</code>.
+</aside>
+<pre class="highlight plaintext"><code>form.username
+</code></pre>
+
+<h3 id="form-username">form.username</h3>
+
+<p>renders the form username text element.</p>
+
+<h2 id="customer_form">customer_form</h2>
+
+<aside class="notice">
+Only can be used on <code>customers/register.twig</code>.
+</aside>
+
+<h3 id="form-email">form.email</h3>
+
+<p>renders the form email text element.</p>
+
+<h3 id="form-password">form.password</h3>
+
+<p>renders the form password text element.</p>
+
+<h3 id="form-passwordretype">form.passwordRetype</h3>
+
+<p>renders the form password retype text element.</p>
+
+<h3 id="form-firstname">form.firstName</h3>
+
+<p>renders the form first name text element.</p>
+
+<h3 id="form-lastname">form.lastName</h3>
+
+<p>renders the form last name element.</p>
+
+<h3 id="form-address1">form.address1</h3>
+
+<p>renders the form address1 element.</p>
+
+<h3 id="form-address2">form.address2</h3>
+
+<p>renders the form address2 element.</p>
+
+<h3 id="form-city">form.city</h3>
+
+<p>renders the form city element.</p>
+
+<h3 id="form-stateprovince">form.stateProvince</h3>
+
+<p>renders the form state/province select element.</p>
+
+<h3 id="form-postalcode">form.postalCode</h3>
+
+<p>renders the form postal code element.</p>
+
+<h3 id="form-phone">form.phone</h3>
+
+<p>renders the form postal code element.</p>
+
+<h2 id="shipping_form">shipping_form</h2>
+
+<h2 id="calcsimple">calcSimple</h2>
+
+<aside class="notice">
+Only can be used on <code>customers/product.twig</code>.
+</aside>
+
+<h3 id="calcsimple-start">calcSimple.start</h3>
+
+<p>renders the start tag of the calculator. This must be called before any other methods in this helper</p>
+
+<h3 id="calcsimple-end">calcSimple.end</h3>
+
+<p>renders the end of the calculator. This should be the last call of this helper</p>
+
+<h3 id="calcsimple-attributeoptions">calcSimple.attributeOptions</h3>
+
+<p>renders the attribute options selector</p>
+
+<h3 id="calcsimple-addons">calcSimple.addOns</h3>
+
+<p>renders the add-ons selectors</p>
+
+<h3 id="calcsimple-summary">calcSimple.summary</h3>
+
+<p>Renders the summary area</p>
+
+<h3 id="calcsimple-numsets">calcSimple.numSets</h3>
+
+<p>Renders the numSets input</p>
+
+<h3 id="calcsimple-addbutton">calcSimple.addButton</h3>
+
+<p>Renders the add to cart button</p>
+
+					<h1 id="twig-documentaiton">Twig Documentaiton</h1>
 
 <p>Twig is an open-source, PHP-based template language.</p>
 
@@ -130,6 +287,8 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 <h3 id="address">address</h3>
 
 <p>Represents an address</p>
+
+<h3 id="form">form</h3>
 
 <h3 id="cart">cart</h3>
 
@@ -150,9 +309,9 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <h2 id="sandbox-ftp-access">Sandbox FTP Access</h2>
 
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
+			</div>
+			<div class="dark-box">
+			</div>
+		</div>
+	</body>
 </html>
