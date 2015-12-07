@@ -4,6 +4,10 @@
 
 The _index.twig_ renders your store home page
 
+## product.twig
+
+The _product.twig_ renders your store product pages
+
 ## cart.twig
 
 The _cart.twig_ renders your the contents of the customer's shopping cart.

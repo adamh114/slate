@@ -119,3 +119,33 @@ renders the form postal code element.
 
 ## shipping_form
 
+
+
+## calcSimple
+
+<aside class="notice">
+Only can be used on <code>customers/product.twig</code>.
+</aside>
+
+### calcSimple.start
+renders the start tag of the calculator. This must be called before any other methods in this helper
+
+### calcSimple.end
+renders the end of the calculator. This should be the last call of this helper
+
+### calcSimple.attributeOptions
+renders the attribute options selector
+
+### calcSimple.addOns
+renders the add-ons selectors
+
+### calcSimple.summary
+Renders the summary area
+
+### calcSimple.numSets
+Renders the numSets input
+
+### calcSimple.addButton
+Renders the add to cart button
+
+
