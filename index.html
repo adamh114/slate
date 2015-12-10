@@ -274,6 +274,68 @@ Only can be used on <code>customers/product.twig</code>.
 
 <p>Renders the add to cart button</p>
 
+<h2 id="cart">cart</h2>
+
+<h3 id="cart-start">cart.start</h3>
+
+<p>renders the start tag of the calculator. This must be called before any other methods in this helper</p>
+
+<h3 id="cart-end">cart.end</h3>
+
+<p>renders the end of the calculator. This should be the last call of this helper</p>
+
+<h3 id="cart-num_items">cart.num_items</h3>
+
+<p>return the number of items in the cart</p>
+
+<h3 id="cart-subtotal">cart.subtotal</h3>
+
+<p>returns the subtotal amount</p>
+
+<h3 id="cart-shipping">cart.shipping</h3>
+
+<p>returns the shipping amount</p>
+
+<h3 id="cart-tax">cart.tax</h3>
+
+<p>returns the tax amount</p>
+
+<h3 id="cart-total">cart.total</h3>
+
+<p>returns the total amount</p>
+
+<h3 id="cart-items">cart.items</h3>
+
+<p>returns an array of cart_item</p>
+
+<h2 id="cart_item">cart_item</h2>
+
+<aside class="notice">
+Cannot be used directly. Must be accessed through the cart object
+</aside>
+
+<h3 id="cart_item-productcategory">cart_item.productCategory</h3>
+
+<p>returns the product cateogry, e.g. &ldquo;Business Cards&rdquo;</p>
+
+<h3 id="cart_item-text">cart_item.text</h3>
+
+<p>returns the text of the attributes</p>
+
+<h3 id="cart_item-description">cart_item.description</h3>
+
+<h3 id="cart_item-amount">cart_item.amount</h3>
+
+<p>return amount of cart item</p>
+
+<h3 id="cart_item-job_name_text_field">cart_item.job_name_text_field</h3>
+
+<p>render text field for user to enter/update job name</p>
+
+<h3 id="cart_item-job_name">cart_item.job_name</h3>
+
+<p>returns the job name</p>
+
 					<h1 id="twig-documentaiton">Twig Documentaiton</h1>
 
 <p>Twig is an open-source, PHP-based template language.</p>
