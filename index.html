@@ -395,6 +395,8 @@ Only can be used on <code>cart.twig</code>.
 
 <p>renders the ship_to_form postal code element.</p>
 
+<h2 id="ship_service">ship_service</h2>
+
 <blockquote>
 <p>How to use ship_service to render a select element (dropdown)</p>
 </blockquote>
@@ -404,15 +406,7 @@ Only can be used on <code>cart.twig</code>.
         {{cart.ship_services_select_element}}
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-
 </code></pre>
-
-<div class="radio">
-    <label>
-        <input type="radio" name="" id="input" value="" checked="checked">
-        Radio Box
-    </label>
-</div>
 
 <blockquote>
 <p>How to use ship_service to render a list of radio buttons</p>
@@ -421,18 +415,15 @@ Only can be used on <code>cart.twig</code>.
 
 {{ ship_services.start}}
     {% for ship_service in ship_services %}
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-        {{ship_service.radio_element}}
-        {{ship_service.service_name}} {{ship_service.amount}}
-    <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+                {{ship_service.radio_element}}
+                {{ship_service.service_name}} {{ship_service.amount}}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     {% endfor %}
 {{ ship_services.end}}
-
 </code></pre>
-
-<h2 id="ship_service">ship_service</h2>
 
 <aside class="notice">
 Can not be used directly. Retrieved from <code>cart</code> object.
