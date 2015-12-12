@@ -308,6 +308,18 @@ Only can be used on <code>customers/product.twig</code>.
 
 <p>returns an array of cart_item</p>
 
+<h3 id="cart-ship_to_form">cart.ship_to_form</h3>
+
+<p>returns an ship_to_form for user to enter ship to address.</p>
+
+<h3 id="cart-ship_services">cart.ship_services</h3>
+
+<p>returns an array of ship_serivce</p>
+
+<h3 id="cart-ship_services_select_element">cart.ship_services_select_element</h3>
+
+<p>returns a rendered select drop down element of ship services</p>
+
 <h2 id="cart_item">cart_item</h2>
 
 <aside class="notice">
@@ -335,6 +347,74 @@ Cannot be used directly. Must be accessed through the cart object
 <h3 id="cart_item-job_name">cart_item.job_name</h3>
 
 <p>returns the job name</p>
+
+<h2 id="ship_to_form">ship_to_form</h2>
+
+<aside class="notice">
+Only can be used on <code>cart.twig</code>.
+</aside>
+
+<h3 id="ship_to_form-name">ship_to_form.name</h3>
+
+<p>renders the ship_to_form first name text element.</p>
+
+<h3 id="ship_to_form-careof">ship_to_form.careOf</h3>
+
+<p>renders the ship_to_form last name element.</p>
+
+<h3 id="ship_to_form-address1">ship_to_form.address1</h3>
+
+<p>renders the ship_to_form address1 element.</p>
+
+<h3 id="ship_to_form-address2">ship_to_form.address2</h3>
+
+<p>renders the ship_to_form address2 element.</p>
+
+<h3 id="ship_to_form-city">ship_to_form.city</h3>
+
+<p>renders the ship_to_form city element.</p>
+
+<h3 id="ship_to_form-stateprovince">ship_to_form.stateProvince</h3>
+
+<p>renders the ship_to_form state/province select element.</p>
+
+<h3 id="ship_to_form-postalcode">ship_to_form.postalCode</h3>
+
+<p>renders the ship_to_form postal code element.</p>
+
+<h2 id="ship_service">ship_service</h2>
+
+<aside class="notice">
+Can not be used directly. Retrieved from <code>cart</code> object.
+</aside>
+
+<h3 id="ship_service-id">ship_service.id</h3>
+
+<p>renders id of the ship service</p>
+
+<h3 id="ship_service-carrier_handle">ship_service.carrier_handle</h3>
+
+<p>renders handle of carrier e.g. FEDEX</p>
+
+<h3 id="ship_service-carrier_name">ship_service.carrier_name</h3>
+
+<p>renders name of carrier e.g. Fedex</p>
+
+<h3 id="ship_service-service_handle">ship_service.service_handle</h3>
+
+<p>renders handle of service e.g. GROUND</p>
+
+<h3 id="ship_service-service_name">ship_service.service_name</h3>
+
+<p>renders name of serivce e.g. Ground</p>
+
+<h3 id="ship_service-delivery_days">ship_service.delivery_days</h3>
+
+<p>renders number of days for delivery e.g. 2</p>
+
+<h3 id="ship_service-amount">ship_service.amount</h3>
+
+<p>renders amount of ship ervice</p>
 
 					<h1 id="twig-documentaiton">Twig Documentaiton</h1>
 
