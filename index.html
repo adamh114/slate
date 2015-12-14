@@ -93,6 +93,14 @@ You must replace <code>Username</code> and <code>Password</code> with your perso
 
 <p>The <em>cart.twig</em> renders your the contents of the customer&rsquo;s shopping cart.</p>
 
+<h2 id="checkout-twig">checkout.twig</h2>
+
+<p>The checkout.twig_ renders the checkout/payment page.</p>
+
+<h2 id="checkout-complete-twig">checkout-complete.twig</h2>
+
+<p>The checkout-complete.twig_ renders the checkout complete page.</p>
+
 <h2 id="upload-twig">upload.twig</h2>
 
 <p>The <em>cart.twig</em> renders customer upload page.</p>
@@ -237,8 +245,6 @@ Only can be used on <code>customers/register.twig</code>.
 <h3 id="form-phone">form.phone</h3>
 
 <p>renders the form postal code element.</p>
-
-<h2 id="shipping_form">shipping_form</h2>
 
 <h2 id="calcsimple">calcSimple</h2>
 
@@ -456,6 +462,70 @@ Can not be used directly. Retrieved from <code>cart</code> object.
 <h3 id="ship_service-amount">ship_service.amount</h3>
 
 <p>renders amount of ship ervice</p>
+
+<h2 id="checkout">checkout</h2>
+
+<h3 id="checkout-start">checkout.start</h3>
+
+<p>renders the start tag of the checkout. This must be called before any other methods in this helper</p>
+
+<h3 id="checkout-end">checkout.end</h3>
+
+<p>renders the end of the checkout. This should be the last call of this helper</p>
+
+<h3 id="checkout-credit_card_form">checkout.credit_card_form</h3>
+
+<p>returns an instance of credit_card_form</p>
+
+<h2 id="credit_card_form">credit_card_form</h2>
+
+<aside class="notice">
+Only can be used on <code>checkout.twig</code>.
+</aside>
+
+<aside class="notice">
+Cannot be called directly. Must be access by <code>checkout.credit_card_form</code>.
+</aside>
+
+<h3 id="credit_card_form-card_number">credit_card_form.card_number</h3>
+
+<p>renders the credit_card_form card number element.</p>
+
+<h3 id="credit_card_form-card_exp_month">credit_card_form.card_exp_month</h3>
+
+<p>renders the credit_card_form card expiration month element.</p>
+
+<h3 id="credit_card_form-card_exp_year">credit_card_form.card_exp_year</h3>
+
+<p>renders the credit_card_form card expiration year element.</p>
+
+<h3 id="credit_card_form-card_cvc">credit_card_form.card_cvc</h3>
+
+<p>renders the credit_card_form card cvc element.</p>
+
+<h3 id="credit_card_form-name">credit_card_form.name</h3>
+
+<p>renders the credit_card_form first name text element.</p>
+
+<h3 id="credit_card_form-address1">credit_card_form.address1</h3>
+
+<p>renders the credit_card_form address1 element.</p>
+
+<h3 id="credit_card_form-address2">credit_card_form.address2</h3>
+
+<p>renders the credit_card_form address2 element.</p>
+
+<h3 id="credit_card_form-city">credit_card_form.city</h3>
+
+<p>renders the credit_card_form city element.</p>
+
+<h3 id="credit_card_form-stateprovince">credit_card_form.stateProvince</h3>
+
+<p>renders the credit_card_form state/province select element.</p>
+
+<h3 id="credit_card_form-postalcode">credit_card_form.postalCode</h3>
+
+<p>renders the credit_card_form postal code element.</p>
 
 					<h1 id="twig-documentaiton">Twig Documentaiton</h1>
 
