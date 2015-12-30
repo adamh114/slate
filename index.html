@@ -246,6 +246,41 @@ Only can be used on <code>customers/register.twig</code>.
 
 <p>renders the form postal code element.</p>
 
+<blockquote>
+<p>How to conditionally display a login link</p>
+</blockquote>
+<pre class="highlight html"><code>    {% if customer %}
+        <span class="nt">&lt;div</span> <span class="nt">&gt;</span>
+            Hello {{customer.first_name}}!
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/logout"</span><span class="nt">&gt;</span>Logout<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    {% else %}
+        <span class="nt">&lt;div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/login"</span><span class="nt">&gt;</span>Login<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    {% else %}
+
+</code></pre>
+
+<h2 id="customer">customer</h2>
+
+<aside class="notice">
+You should always check if a customer is logged in before using any helper methods
+{% if customer %}  {{customer.first_name}} {% endif %}
+</aside>
+
+<h3 id="customer-first_name">customer.first_name</h3>
+
+<p>returns the first name of the logged in customer</p>
+
+<h3 id="customer-last_name">customer.last_name</h3>
+
+<p>returns the first name of the logged in customer</p>
+
+<h3 id="customer-email">customer.email</h3>
+
+<p>returns the first name of the logged in customer</p>
+
 <h2 id="calcsimple">calcSimple</h2>
 
 <aside class="notice">
