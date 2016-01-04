@@ -529,11 +529,11 @@ Can not be used directly. Retrieved from <code>cart</code> object.
 <pre class="highlight html"><code>{% set ship_method = cart.ship_methods %}
 
 {{ ship_method.start}}
-    {% for ship_service in ship_method %}
+    {% for ship_method in ship_method %}
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;label&gt;</span>
-                {{ship_service.radio_element}}
-                {{ship_service.name}}
+                {{ship_method.radio_element}}
+                {{ship_method.name}}
             <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     {% endfor %}
@@ -544,33 +544,17 @@ Can not be used directly. Retrieved from <code>cart</code> object.
 Can not be used directly. Retrieved from <code>cart</code> object.
 </aside>
 
-<h3 id="ship_service-id">ship_service.id</h3>
+<h3 id="ship_method-id">ship_method.id</h3>
 
-<p>renders id of the ship service</p>
+<p>renders id of the ship method</p>
 
-<h3 id="ship_service-carrier_handle">ship_service.carrier_handle</h3>
+<h3 id="ship_method-handle">ship_method.handle</h3>
 
-<p>renders handle of carrier e.g. FEDEX</p>
+<p>renders handle of method e.g. LOCAL_PICKUP</p>
 
-<h3 id="ship_service-carrier_name">ship_service.carrier_name</h3>
+<h3 id="ship_method-name">ship_method.name</h3>
 
-<p>renders name of carrier e.g. Fedex</p>
-
-<h3 id="ship_service-service_handle">ship_service.service_handle</h3>
-
-<p>renders handle of service e.g. GROUND</p>
-
-<h3 id="ship_service-service_name">ship_service.service_name</h3>
-
-<p>renders name of serivce e.g. Ground</p>
-
-<h3 id="ship_service-delivery_days">ship_service.delivery_days</h3>
-
-<p>renders number of days for delivery e.g. 2</p>
-
-<h3 id="ship_service-amount">ship_service.amount</h3>
-
-<p>renders amount of ship ervice</p>
+<p>renders name of method e.g. &ldquo;Ship to me&rdquo; or &ldquo;Local Pickup&rdquo;</p>
 
 <h2 id="checkout">checkout</h2>
 
