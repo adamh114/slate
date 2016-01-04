@@ -353,13 +353,21 @@ Only can be used on <code>customers/product.twig</code>.
 
 <p>returns an array of cart_item</p>
 
+<h3 id="cart-ship_methods">cart.ship_methods</h3>
+
+<p>returns an array of ship_method</p>
+
+<h3 id="cart-ship_method_select_element">cart.ship_method_select_element</h3>
+
+<p>returns a rendered select drop down element of ship methods</p>
+
 <h3 id="cart-ship_to_form">cart.ship_to_form</h3>
 
 <p>returns an ship_to_form for user to enter ship to address.</p>
 
 <h3 id="cart-ship_services">cart.ship_services</h3>
 
-<p>returns an array of ship_serivce</p>
+<p>returns an array of ship_service</p>
 
 <h3 id="cart-ship_services_select_element">cart.ship_services_select_element</h3>
 
@@ -468,6 +476,68 @@ Only can be used on <code>cart.twig</code>.
         <span class="nt">&lt;/div&gt;</span>
     {% endfor %}
 {{ ship_services.end}}
+</code></pre>
+
+<aside class="notice">
+Can not be used directly. Retrieved from <code>cart</code> object.
+</aside>
+
+<h3 id="ship_service-id">ship_service.id</h3>
+
+<p>renders id of the ship service</p>
+
+<h3 id="ship_service-carrier_handle">ship_service.carrier_handle</h3>
+
+<p>renders handle of carrier e.g. FEDEX</p>
+
+<h3 id="ship_service-carrier_name">ship_service.carrier_name</h3>
+
+<p>renders name of carrier e.g. Fedex</p>
+
+<h3 id="ship_service-service_handle">ship_service.service_handle</h3>
+
+<p>renders handle of service e.g. GROUND</p>
+
+<h3 id="ship_service-service_name">ship_service.service_name</h3>
+
+<p>renders name of serivce e.g. Ground</p>
+
+<h3 id="ship_service-delivery_days">ship_service.delivery_days</h3>
+
+<p>renders number of days for delivery e.g. 2</p>
+
+<h3 id="ship_service-amount">ship_service.amount</h3>
+
+<p>renders amount of ship ervice</p>
+
+<h2 id="ship_method">ship_method</h2>
+
+<blockquote>
+<p>How to use ship_method to render a select element (dropdown)</p>
+</blockquote>
+<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Select ship method:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>
+        {{cart.ship_method_select_element}}
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+<blockquote>
+<p>How to use ship_method to render a list of radio buttons</p>
+</blockquote>
+<pre class="highlight html"><code>{% set ship_method = cart.ship_methods %}
+
+{{ ship_method.start}}
+    {% for ship_service in ship_method %}
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+                {{ship_service.radio_element}}
+                {{ship_service.name}}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    {% endfor %}
+{{ ship_method.end}}
 </code></pre>
 
 <aside class="notice">
